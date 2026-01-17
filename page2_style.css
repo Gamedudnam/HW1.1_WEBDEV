@@ -308,3 +308,21 @@ td:not(.day):not(.lunch-break):hover {
     from {transform: scale(0.7); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
 }
+
+/* จัดตำแหน่งรูปภาพใน Popup */
+#modalImg {
+    position: absolute;  /* สั่งให้ลอย */
+    bottom: 20px;        /* ห่างจากขอบล่าง 20px */
+    right: 20px;         /* ห่างจากขอบขวา 20px */
+    width: 70px;        /* กำหนดขนาดรูป (ปรับได้ตามชอบ) */
+    height: auto;        /* ให้สูงตามสัดส่วน */
+    opacity: 0.8;        /* (ทางเลือก) ทำให้จางลงนิดหน่อยจะได้ไม่กวนสายตา */
+    border-radius: 10px; /* (ทางเลือก) ทำมุมมน */
+}
+
+/* ตรวจสอบว่า .modal-content มีบรรทัดนี้หรือยัง (ปกติผมใส่ให้แล้ว) */
+.modal-content {
+    position: relative; /* สำคัญมาก! ต้องมีบรรทัดนี้ รูปถึงจะอยู่ในกล่อง */
+    /* ... ค่าอื่นๆ ... */
+    padding-bottom: 50px; /* เพิ่มพื้นที่ด้านล่างหน่อย กันข้อความทับรูป */
+}

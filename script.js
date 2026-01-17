@@ -1,17 +1,28 @@
-/* === ไฟล์ script.js === */
+/* === ไฟล์ script.js (ฉบับอัปเดต เพิ่มรูปภาพ) === */
 
-// 1. ฟังก์ชันเปิด Popup (รับชื่อวิชา และ รายละเอียด มาแสดง)
-function openPopup(title, description) {
+// 1. ฟังก์ชันเปิด Popup (รับ 3 ค่า: ชื่อวิชา, รายละเอียด, และ ลิ้งก์รูปภาพ)
+function openPopup(title, description, imgUrl) {
     // อ้างอิงไปยังกล่องข้อความใน HTML
     var modal = document.getElementById("courseModal");
     var modalTitle = document.getElementById("modalTitle");
     var modalDesc = document.getElementById("modalDesc");
+    var modalImg = document.getElementById("modalImg"); // ✅ เพิ่มการอ้างอิงรูปภาพ
 
-    // เอาข้อความที่รับมา ใส่เข้าไปในกล่อง
+    // ใส่ข้อความ
     modalTitle.innerText = title;
-    modalDesc.innerHTML = description; // ใช้ innerHTML เพื่อให้ใส่ <br> เว้นบรรทัดได้
+    modalDesc.innerHTML = description;
 
-    // สั่งให้ Popup แสดงตัว (เปลี่ยนจาก display:none เป็น flex)
+    // ✅ ส่วนจัดการรูปภาพ
+    if (imgUrl) {
+        // ถ้ามีการส่งลิ้งก์รูปมา (imgUrl ไม่ว่าง)
+        modalImg.src = imgUrl;       // ใส่ path รูป
+        modalImg.style.display = "block"; // สั่งให้แสดงรูป
+    } else {
+        // ถ้าไม่ได้ส่งลิ้งก์รูปมา
+        modalImg.style.display = "none";  // ซ่อนรูปไปเลย
+    }
+
+    // สั่งให้ Popup แสดงตัว
     modal.style.display = "flex";
 }
 
@@ -24,7 +35,7 @@ function closePopup() {
 // 3. ฟังก์ชันปิด Popup (เมื่อกดพื้นที่สีดำข้างนอก)
 window.onclick = function(event) {
     var modal = document.getElementById("courseModal");
-    // เช็คว่าสิ่งที่กด คือตัวพื้นหลังสีดำใช่ไหม (ถ้าใช่ ให้ปิด)
+    // เช็คว่าสิ่งที่กด คือตัวพื้นหลังสีดำใช่ไหม
     if (event.target == modal) {
         modal.style.display = "none";
     }
