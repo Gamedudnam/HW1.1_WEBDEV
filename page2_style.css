@@ -170,7 +170,7 @@ td.day {
     border: 2px solid #e6cfa5;
     color: #8d6e63;
     font-weight: bold;
-    writing-mode: vertical-lr;
+    /* writing-mode: vertical-lr; */
     text-orientation: upright;
     font-size: 2rem;
 }
