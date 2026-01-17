@@ -31,6 +31,15 @@
             <img src="images/house.png" title="Home" alt="Home" class="image_link">
         </a>
     </div>
+    
+    <div id="courseModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="modalTitle">ชื่อวิชา</h2>
+        <hr>
+        <p id="modalDesc">รายละเอียด...</p>
+    </div>
+    </div>
 
     <div class="container">
         <div class="table-wrapper">
@@ -54,7 +63,7 @@
                         <td class="day mon">MON</td>
                         <td></td>
                         <td colspan="3">
-                            <div class="subject">
+                            <div class="subject" style="cursor: pointer;" onclick="openPopup('Web Programming', '<b>Lecturer :</b> Asst. Prof. Dr. Suriya Natsupakpong<br><b>Role :</b> Student <br> <b>Room :</b> FB303')">
                                 FRA502 SPECIAL TOPIC III : <br>
                                 WEB PROGRAMMING
                             </div>
@@ -75,7 +84,7 @@
                         <td></td>
                         <td></td>
                         <td colspan="3">
-                            <div class="subject">
+                            <div class="subject" style="cursor: pointer;" onclick="openPopup('Web Programming', '<b>Lecturer :</b> Mr. Bantoon Srisuwan<br><b>Role :</b> TA <br> <b>Room :</b> FB303')">
                                 FRA500 SPECIAL TOPIC I :<br>
                                 INDUSTRIAL AUTOMATION WITH PLC (TA)
                             </div>
@@ -102,7 +111,7 @@
                         <td></td>
                         <td></td>
                         <td colspan="3">
-                            <div class="subject">
+                            <div class="subject" style="cursor: pointer;" onclick="openPopup('Web Programming', '<b>Lecturer :</b> Dr. Prakarnkiat Youngkong<br><b>Role :</b> Student <br> <b>Room :</b> FB308')">
                                 FRA403 : MANAGING TECHNOLOGY,<br>
                                 INNOVATION AND ENTREPRENEURSHIP
                             </div>
@@ -117,7 +126,7 @@
                         <td></td>
                         <td></td>
                         <td colspan="3">
-                            <div class="subject">
+                            <div class="subject" style="cursor: pointer;" onclick="openPopup('Web Programming', '<b>Lecturer :</b> Assoc. Prof. Dr. Siam Charoenseang<br><b>Role :</b> Student <br> <b>Room :</b> FB506')">
                                 FRA500 SPECIAL TOPIC I : <br>
                                 HUMAN-ROBOTICS INTERFACE
                             </div>
@@ -128,7 +137,7 @@
                         <td class="day sta">STA</td>
                         <td></td>
                         <td colspan="3">
-                            <div class="subject">
+                                <div class="subject" style="cursor: pointer;" onclick="openPopup('Web Programming', '<b>Lecturer :</b> Mr. Chanchai Sattayanon<br><b>Role :</b> Student <br> <b>Room :</b> Online')">
                                 GEN332 : <br>
                                 SCIENCE STORYTELLING
                             </div>
@@ -142,5 +151,6 @@
             </table>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
