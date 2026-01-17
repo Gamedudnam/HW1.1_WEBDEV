@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mali', 'Kanit', sans-serif;
+    background-color: #111;
+
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* min-height: 100vh; */
+}
+.wrapper span {
+	position: fixed;
+	bottom: -150px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+	animation: animate 5s linear infinite;
+}
+.wrapper span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.1s;
+}
+.wrapper span:nth-child(2) {
+	left: 10%;
+	animation-delay: 1s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+.wrapper span:nth-child(4) {
+	left: 30%;
+	animation-delay: 3s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+.wrapper span:nth-child(6) {
+	left: 50%;
+	animation-delay: 4s;
+}
+.wrapper span:nth-child(7) {
+	left: 60%;
+	animation-delay: 2s;
+	width: 100px;
+	height: 100px;
+}
+.wrapper span:nth-child(8) {
+	left: 70%;
+	animation-delay: 5s;
+}
+.wrapper span:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+.wrapper span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-1000px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+.container {
+    width: 95%;
+    max-width: 1500px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 114, 255, 0.5);
+    margin: 0 auto;
+}
+
+header h1 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 40px;
+    font-size: 110px;
+    margin: 1%;
+    text-shadow: 
+        0 0 10px #FFCE00,
+        0 0 20px #FFCE00,
+        0 0 30px #FFCE00,
+        0 0 80px #DE0707;
+}
+
+/* --- ตาราง --- */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    min-width: 1450px;
+}
+
+
+th {
+    background-color: #4873A3;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+th.corner {
+    background-color: #4873A3;
+    border-radius: 15px 0 0 0;
+}
+th.lunch-header {
+    background-color: #e6cfa5;
+    color: #5c4033;
+}
+
+/* เซลล์ปกติ */
+td {
+    /* border: 2px dashed #000; */
+    height: 90px;
+    text-align: center;
+    border-radius: 8px;
+    vertical-align: middle;
+    transition: all 0.2s;
+    position: relative;
+    background-color: #D7DBDB;
+}
+
+/* ช่องซ้ายสุด (วัน) - สีพาสเทล */
+td.day {
+    font-weight: bold;
+    color: #000;
+    border: none;
+    width: 100px;
+    font-size: 20px;
+}
+
+.mon { background-color: #fff9c4; }
+.tue { background-color: #ffccbc; }
+.wed { background-color: #c8e6c9; }
+.thu { background-color: #ffe0b2; }
+.fri { background-color: #bbdefb; }
+.sta { background-color: #fff; }
+
+/* ช่องพักเที่ยง (แนวตั้ง) */
+.lunch-break {
+    background-color: #fff3e0;
+    border: 2px solid #e6cfa5;
+    color: #8d6e63;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-size: 2rem;
+}
+
+/* ช่องวิชาเรียน (Subject Box) */
+.subject {
+    padding: 5px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+td:not(.day):not(.lunch-break):hover {
+    background-color: #f9f9f9;
+    border-color: #bbb;
+    cursor: pointer;
+}
+
+/* --- ปุ่ม Home มุมขวาบน --- */
+.home-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background-color: #222;
+    border: 2px solid #0072ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0072ff;
+    z-index: 100;
+    transition: transform 0.3s;
+}
+.home-btn:hover {
+    transform: scale(1.1);
+    background-color: #0072ff;
+}
+
+.image_link {
+	max-width: 60%;
+    max-height: 60%;
+    width: auto;
+    height: auto;
+    margin: 15%;
+    object-fit: contain;
+}

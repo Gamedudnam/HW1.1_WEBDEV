@@ -132,6 +132,7 @@ header h1 {
 }
 
 .icon .page:hover {
+	background-color: #0072ff;
     box-shadow: 0 0 25px 5px #0072ff; 
     transform: scale(1.05);
 }
