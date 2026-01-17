@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background: #111;
+}
+
+.wrapper span {
+	position: fixed;
+	bottom: -150px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+	animation: animate 5s linear infinite;
+}
+.wrapper span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.1s;
+}
+.wrapper span:nth-child(2) {
+	left: 10%;
+	animation-delay: 1s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+.wrapper span:nth-child(4) {
+	left: 30%;
+	animation-delay: 3s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+.wrapper span:nth-child(6) {
+	left: 50%;
+	animation-delay: 4s;
+}
+.wrapper span:nth-child(7) {
+	left: 60%;
+	animation-delay: 2s;
+	width: 100px;
+	height: 100px;
+}
+.wrapper span:nth-child(8) {
+	left: 70%;
+	animation-delay: 5s;
+}
+.wrapper span:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+.wrapper span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-1000px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+
+header h1 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 40px;
+    font-size: 110px;
+    margin: 1%;
+    text-shadow: 
+        0 0 10px #FFCE00,
+        0 0 20px #FFCE00,
+        0 0 30px #FFCE00,
+        0 0 80px #DE0707;
+}
+
+.icon {
+    background-color: rgba(144, 206, 232, 0.4);
+
+	width: fit-content;
+	max-width: 1080px;
+
+	height: auto;
+    min-height: 400px;
+
+    margin: 0 auto;
+    text-align: center;
+	border-radius: 50px;
+
+    justify-content: center;
+    align-content: center;
+
+    gap: 5px;
+    padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px 5px #0072ff;
+	display: flex;         
+    flex-wrap: wrap;
+}
+
+.icon .page {
+	width: 210px;
+    height: 210px;
+    background-color: #222;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+    border-radius: 30px;	
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon .page:hover {
+    box-shadow: 0 0 25px 5px #0072ff; 
+    transform: scale(1.05);
+}
+
+.icon .page:hover .image_link {
+    filter: grayscale(70%);
+    transition: filter 0.3s ease;
+}
+
+.image_link {
+	max-width: 70%;
+    max-height: 70%;
+    width: auto;
+    height: auto;
+    margin: 15%;
+    object-fit: contain;
+}
