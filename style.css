@@ -3,6 +3,7 @@ body {
     background: #111;
 }
 
+/* --- animation --- */
 .wrapper span {
 	position: fixed;
 	bottom: -150px;
@@ -76,7 +77,7 @@ body {
 	}
 }
 
-
+/* --- หัวข้อ --- */
 header h1 {
     color: #fff;
     text-align: center;
@@ -91,6 +92,7 @@ header h1 {
         0 0 80px #DE0707;
 }
 
+/* --- box --- */
 .icon {
     background-color: rgba(144, 206, 232, 0.4);
 
@@ -115,6 +117,7 @@ header h1 {
     flex-wrap: wrap;
 }
 
+/* --- icon --- */
 .icon .page {
 	width: 210px;
     height: 210px;
@@ -142,6 +145,7 @@ header h1 {
     transition: filter 0.3s ease;
 }
 
+/* --- calendar button --- */
 .circle {
     width: 70px;
     height: 70px;
@@ -166,6 +170,7 @@ header h1 {
     box-shadow: 0 0 20px #0072ff;
 }
 
+/* --- image --- */
 .image_link {
 	max-width: 70%;
     max-height: 70%;

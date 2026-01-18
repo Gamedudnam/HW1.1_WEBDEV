@@ -3,12 +3,9 @@ body {
     padding: 0;
     font-family: 'Mali', 'Kanit', sans-serif;
     background-color: #111;
-
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
-    /* min-height: 100vh; */
 }
+
+/* --- animation --- */
 .wrapper span {
 	position: fixed;
 	bottom: -150px;
@@ -82,6 +79,7 @@ body {
 	}
 }
 
+/* --- box ---  */
 .container {
     width: 95%;
     max-width: 1500px;
@@ -92,6 +90,7 @@ body {
     margin: 0 auto;
 }
 
+/* --- หัวข้อ --- */
 header h1 {
     color: #fff;
     text-align: center;
@@ -136,9 +135,8 @@ th.lunch-header {
     color: #5c4033;
 }
 
-/* เซลล์ปกติ */
+/* --- เซลล์ปกติ --- */
 td {
-    /* border: 2px dashed #000; */
     height: 90px;
     text-align: center;
     border-radius: 8px;
@@ -148,7 +146,7 @@ td {
     background-color: #D7DBDB;
 }
 
-/* ช่องซ้ายสุด (วัน) - สีพาสเทล */
+/* --- ช่องซ้ายสุด (วัน) ---*/
 td.day {
     font-weight: bold;
     color: #000;
@@ -164,18 +162,17 @@ td.day {
 .fri { background-color: #bbdefb; }
 .sta { background-color: #fff; }
 
-/* ช่องพักเที่ยง (แนวตั้ง) */
+/* --- ช่องพักเที่ยง (แนวตั้ง) --- */
 .lunch-break {
     background-color: #fff3e0;
     border: 2px solid #e6cfa5;
     color: #8d6e63;
     font-weight: bold;
-    /* writing-mode: vertical-lr; */
     text-orientation: upright;
     font-size: 2rem;
 }
 
-/* ช่องวิชาเรียน (Subject Box) */
+/* --- ช่องวิชาเรียน --- */
 .subject {
     padding: 5px;
     margin: 2px;
@@ -185,14 +182,12 @@ td.day {
     font-weight: bold;
 }
 
-/* Hover Effect */
 td:not(.day):not(.lunch-break):hover {
     background-color: #f9f9f9;
     border-color: #bbb;
-    /* cursor: pointer; */
 }
 
-/* --- ปุ่ม Home มุมขวาบน --- */
+/* --- Home button --- */
 .home-btn {
     position: fixed;
     top: 30px;
@@ -225,42 +220,38 @@ td:not(.day):not(.lunch-break):hover {
     object-fit: contain;
 }
 
-/* =========================================
-   ส่วนที่เพิ่มใหม่: CSS สำหรับ Popup (Modal)
-   ========================================= */
+/* --- popup --- */
 
-/* 1. ฉากหลังมืด (Overlay) */
 .modal-overlay {
-    display: none;       /* ซ่อนไว้เป็นค่าเริ่มต้น */
-    position: fixed;     /* ลอยทับหน้าจอ */
-    z-index: 1000;       /* อยู่ชั้นบนสุด (ทับทุกอย่างรวมถึงปุ่ม Home) */
+    display: none;   
+    position: fixed;    
+    z-index: 1000;    
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* สีดำโปร่งแสง */
-    
-    /* จัดกล่องข้อความให้อยู่กึ่งกลางหน้าจอ */
-    display: none; /* ใส่ซ้ำเพื่อความชัวร์ (JS จะเปลี่ยนเป็น flex) */
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: none;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(5px); /* เบลอฉากหลังเล็กน้อยให้สวยงาม */
+    backdrop-filter: blur(5px);
 }
 
-/* 2. กล่องเนื้อหา (Content Box) */
+/* --- Content Box) --- */
 .modal-content {
     background-color: #fff;
     padding: 30px;
     border-radius: 15px;
     width: 90%;
-    max-width: 500px;    /* ความกว้างสูงสุดไม่เกิน 500px */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* เงา */
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     position: relative;
     text-align: center;
-    animation: zoomIn 0.3s; /* ใส่เอฟเฟกต์เด้ง */
+    animation: zoomIn 0.3s;
 }
 
-/* 3. ปุ่มกากบาท (Close Button) */
+/* --- ปุ่มกากบาท --- */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -273,7 +264,7 @@ td:not(.day):not(.lunch-break):hover {
 }
 
 .close-btn:hover {
-    color: #f00; /* ชี้แล้วเปลี่ยนเป็นสีแดง */
+    color: #f00;
 }
 
 #modalTitle {
@@ -281,12 +272,10 @@ td:not(.day):not(.lunch-break):hover {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 24px;
-    
-    /* ✅ เพิ่มบรรทัดนี้เข้าไปครับ */
     font-weight: bold; 
 }
 
-/* 4. จัดรูปแบบตัวอักษรข้างใน Popup */
+/* --- text Popup --- */
 #modalTitle {
     color: #0072ff;
     margin-top: 10px;
@@ -299,30 +288,28 @@ td:not(.day):not(.lunch-break):hover {
     font-size: 22px;
     color: #333;
     line-height: 1.6;
-    text-align: left; /* จัดชิดซ้ายให้อ่านง่าย */
+    text-align: left;
     margin-top: 20px;
 }
 
-/* 5. Animation ตอนเด้งขึ้นมา */
+/* --- Animation pop up --- */
 @keyframes zoomIn {
     from {transform: scale(0.7); opacity: 0;}
     to {transform: scale(1); opacity: 1;}
 }
 
-/* จัดตำแหน่งรูปภาพใน Popup */
+/* --- image Popup --- */
 #modalImg {
-    position: absolute;  /* สั่งให้ลอย */
-    bottom: 20px;        /* ห่างจากขอบล่าง 20px */
-    right: 20px;         /* ห่างจากขอบขวา 20px */
-    width: 70px;        /* กำหนดขนาดรูป (ปรับได้ตามชอบ) */
-    height: auto;        /* ให้สูงตามสัดส่วน */
-    opacity: 0.8;        /* (ทางเลือก) ทำให้จางลงนิดหน่อยจะได้ไม่กวนสายตา */
-    border-radius: 10px; /* (ทางเลือก) ทำมุมมน */
+    position: absolute; 
+    bottom: 20px;     
+    right: 20px;   
+    width: 70px;     
+    height: auto;     
+    opacity: 0.8;       
+    border-radius: 10px; 
 }
 
-/* ตรวจสอบว่า .modal-content มีบรรทัดนี้หรือยัง (ปกติผมใส่ให้แล้ว) */
 .modal-content {
-    position: relative; /* สำคัญมาก! ต้องมีบรรทัดนี้ รูปถึงจะอยู่ในกล่อง */
-    /* ... ค่าอื่นๆ ... */
-    padding-bottom: 50px; /* เพิ่มพื้นที่ด้านล่างหน่อย กันข้อความทับรูป */
+    position: relative;
+    padding-bottom: 50px;
 }
